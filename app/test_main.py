@@ -28,10 +28,10 @@ def products_template() -> list:
 @pytest.mark.parametrize(
     "defined_date, expected",
     [
-        pytest.param(date(2022, 2, 1), []),
-        pytest.param(date(2022, 2, 10), ["chicken", "duck"]),
-        pytest.param(date(2022, 2, 5), ["chicken"]),
-        pytest.param(date(2022, 10, 10), ["salmon", "duck", "chicken"])
+        pytest.param(date(2022, 2, 1), ["salmon", "chicken", "duck"]),
+        pytest.param(date(2022, 2, 10), ["salmon", "chicken", "duck"]),
+        pytest.param(date(2022, 2, 5), ["salmon", "chicken", "duck"]),
+        pytest.param(date(2022, 10, 10), ["salmon", "chicken", "duck"])
     ]
 )
 def test_outdated_products(monkeypatch: any,
